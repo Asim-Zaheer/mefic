@@ -19,7 +19,7 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
             flexDirection: "column",
             alignItems: "flex-start",
             py: "7%",
-            px:isMobile?"10%": isTabletScreen?"7%" :"4%"
+            px:isMobile?"10%": isTabletScreen?"11%" :"8%"
             // py: isLargeScreen ? "1%" : "8%", // Adjust the padding for large screens
           }}
         >
@@ -75,8 +75,9 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
                 >
                   {bold}
                 </span>
-                <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:"30vh" , pb:"2%"}}> </Typography>
               </Typography>
+              <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:"30vh" , pb:"2%"}}> </Typography>
+
               <Typography
                 sx={{
                   color: "#001B2E",

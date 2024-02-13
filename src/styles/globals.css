@@ -1,3 +1,5 @@
 @import url("https://api.fontshare.com/css?f[]=clash-display&display=swap");
 @import url("https://api.fontshare.com/css?f[]=font-name&display=swap");
-
+:root {
+    background-color: #1E2538;
+ }
