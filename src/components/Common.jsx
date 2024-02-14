@@ -77,12 +77,7 @@ const Common = ({ H1, main, H2,bold, paragraph}) => {
                   {bold}
                 </span>
               </Typography>
-<<<<<<< HEAD
-              <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:"30vh" , pb:"2%"}}> </Typography>
-
-=======
                 <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:isXSmallScreen?"37  vh":isMobile?"17vh":isTabletScreen?"20vh":'30vh' , pb:"2%"}}> </Typography>
->>>>>>> main
               <Typography
                 sx={{
                   color: "#001B2E",
