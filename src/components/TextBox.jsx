@@ -48,6 +48,8 @@ const TextBox = () => {
           </Typography>
         </Typography>
         <Typography sx={{ borderBottom: "5px solid #2D3C65", maxWidth: "26vh" }}></Typography>
+        <br />
+
         <Typography sx={{ color: "#fff", paddingLeft: "vh" }}>
           Office ipsum you must be muted. Convers1ation banner gave dive investigation chime usabiltiy whatever. Winning of crystallize another container reinvent stands. Left you viral relaxation unlock t-shaped. Ideal deck support attached waste highlights game synchronise.
         </Typography>
