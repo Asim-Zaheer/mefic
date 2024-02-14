@@ -5,10 +5,11 @@ import { useTheme } from "@mui/material";
 import Container from "./Container";
 
 
-const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
+const Common = ({ H1, main, H2,bold, paragraph}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("600"));
   const isTabletScreen = useMediaQuery("(max-width:899px)");
+  const isXSmallScreen = useMediaQuery("(max-width:300px)");
 
   return (
     <>
@@ -24,7 +25,7 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
           }}
         >
           <Grid container>
-            <Grid item lg={6} xs={12} md={6} order={isTabletScreen ? 2 : 1}>
+            <Grid item lg={6} xs={12} md={6} order={isTabletScreen ? 2 : 1}  >
               <Typography>
                 <span
                   style={{
@@ -76,13 +77,17 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
                   {bold}
                 </span>
               </Typography>
+<<<<<<< HEAD
               <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:"30vh" , pb:"2%"}}> </Typography>
 
+=======
+                <Typography sx={{borderBottom:"5px solid #2D3C65" ,maxWidth:isXSmallScreen?"37  vh":isMobile?"17vh":isTabletScreen?"20vh":'30vh' , pb:"2%"}}> </Typography>
+>>>>>>> main
               <Typography
                 sx={{
                   color: "#001B2E",
                   fontFamily: "clash display",
-                  fontSize: isTabletScreen ? "9px" : "18px",
+                  fontSize: { xs: "12px", sm: "14px", md: "16px", lg: "18px" },
                   fontStyle: "normal",
                   fontWeight: "400",
                   lineHeight: "normal",
@@ -133,7 +138,7 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
             </Grid>
 
             {/* image part */}
-            {includingImage && (
+            {/* {includingImage && (
               <Grid
                 item
                 lg={6}
@@ -161,7 +166,7 @@ const Common = ({ H1, main, H2,bold, paragraph, includingImage }) => {
                   width={isMobile ? 130 : isTabletScreen ? 250 : 400}
                 ></Image>
               </Grid>
-            )}
+            )} */}
           </Grid>
         </Box>
       </Container>
