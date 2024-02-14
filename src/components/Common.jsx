@@ -20,7 +20,7 @@ const Common = ({ H1, main, H2,bold, paragraph}) => {
             flexDirection: "column",
             alignItems: "flex-start",
             py: "7%",
-            px:isMobile?"10%": isTabletScreen?"7%" :"4%"
+            px:isMobile?"10%": isTabletScreen?"11%" :"8%"
             // py: isLargeScreen ? "1%" : "8%", // Adjust the padding for large screens
           }}
         >

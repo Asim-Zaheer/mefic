@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 
@@ -7,8 +6,6 @@ const cardsData = [
   { title: 'Card 2', content: 'Content for Card 2' },
   { title: 'Card 3', content: 'Content for Card 3' }
 ];
-
-
 
 const OurService = () => {
   return (
@@ -51,7 +48,9 @@ const OurService = () => {
         <Grid container spacing={2} justifyContent="center">
           {cardsData.map((card, index) => (
             <Grid item xs={12} sm={6} md={4} key={index} sx={{height:"50vh" }}>
-              <Card sx={{'&:hover': {
+              <Card
+                sx={{
+                  '&:hover': {
                     backgroundColor: 'red',
                     maxHeight: '50vh', // Set max height to 50% of the viewport height
                     height: '24vh',
@@ -61,7 +60,7 @@ const OurService = () => {
                 }}
               >
                 <CardContent>
-                  <Typography variant="h5" component="div"> 
+                  <Typography variant="h5" component="div">
                     {card.title}
                   </Typography>
                   <Typography variant="body2">{card.content}</Typography>
