@@ -25,12 +25,13 @@ export default function Capital(){
     ]
     return(
         <>
+        <Box sx={{backgroundColor:"#FFFF"}} >
         <Container>
         <Box sx={{ display: "flex", justifyContent:isLargeScreen?"center": "center", alignItems: "center", textAlign: "center" }}>
   <Common H1="MEFIC Capital" bold="Portfolio" paragraph="Office ipsum you must be muted. Conversation banner gave dive investigation chime usability whatever. Winning of crystallize another container reinvent stands." H2="" />
 </Box>
 
-<Box sx={{  fontFamily: "Open Sans", fontWeight: "600", fontSize: "16px", display: "flex", justifyContent: "space-around", pb: "6%" }}>
+<Box sx={{  fontFamily: "Open Sans", fontWeight: "600", fontSize: "16px", display: "flex", justifyContent: "space-evenly", pb: "6%" }}>
   <Link href="#"  style={{
           color: "#3D3D3D",
           textDecoration: "none",
@@ -79,6 +80,7 @@ export default function Capital(){
           </Grid>
         </Box>
       </Container>
+      </Box>
         </>
     )
 }

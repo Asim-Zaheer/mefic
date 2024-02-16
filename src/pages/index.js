@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
 import Experience from "../components/Experience";
 import Layout from "../components/Layout";
 import Head from "next/head";
 import Header  from "../components/Header";
-import Footer from "../components/Footer"
+import Portfolio from "../components/Portfolio";
 import Ourservice from "@/components/OurService";
+import Capital from "../components/Capital";
 const Home = () => {
     return (
       <>
@@ -15,6 +15,8 @@ const Home = () => {
          <Header/>
          <Experience/>
         <Ourservice/>
+         <Portfolio/>
+         {/* <Capital/> */}
         </Layout>
       </>
     );

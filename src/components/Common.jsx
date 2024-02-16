@@ -10,6 +10,7 @@ const Common = ({ H1, main, H2,bold, paragraph}) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("600"));
   const isTabletScreen = useMediaQuery("(max-width:899px)");
   const isXSmallScreen = useMediaQuery("(max-width:300px)");
+  const isLargeScreen = useMediaQuery('(min-width:900px)');
 
   return (
     <>
@@ -20,7 +21,8 @@ const Common = ({ H1, main, H2,bold, paragraph}) => {
             flexDirection: "column",
             alignItems: "flex-start",
             py: "7%",
-            px:isMobile?"10%": isTabletScreen?"11%" :"8%"
+            px:isMobile?"10%": isTabletScreen?"11%" :"8%",
+            // justifyContent:'center'
             // py: isLargeScreen ? "1%" : "8%", // Adjust the padding for large screens
           }}
         >

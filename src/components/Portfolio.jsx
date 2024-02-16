@@ -1,5 +1,5 @@
 "use client"
-import { Grid } from "@mui/material"
+import { Grid,Box } from "@mui/material"
 import Cards from "./cards"
 import Common from "./Common"
 import Container from "./Container"
@@ -32,7 +32,10 @@ const portfolioData=[
     
 return(
     <>
-<Container>
+    <Box sx={{backgroundColor:"#FFFF"}} >
+ 
+
+<Container  >
     <Common 
     H1="The" main=" latest news " H2="and our " bold="portfolio companies" paragraph="Office ipsum you must be muted. Conversation banner gave dive investigation chime usabiltiy whatever. Winning of crystallize another container reinvent stands. Left you viral relaxation unlock t-shaped. Ideal deck support attached waste highlights game synchronise." />
      <Grid Container sx={{display:"flex",flexDirection: isMobile? "column" :isTabletScreen?"row":"" ,justifyContent:"center" }} >
@@ -49,6 +52,7 @@ return(
           ))}
     </Grid>
 </Container>
+</Box>
     </>
     )
 }
