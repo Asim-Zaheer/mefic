@@ -1,5 +1,3 @@
-"use client"
-// Import React and necessary components
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -16,7 +14,7 @@ import Button from '@mui/material/Button';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ArrowDownAltIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useMediaQuery, useTheme } from '@mui/material';
+import { useMediaQuery, useTheme, Menu, MenuItem } from '@mui/material';
 import Image from 'next/image';
 
 const drawerWidth = 240;
@@ -26,12 +24,11 @@ const navItems = [
   'About MEFIC',
   'Media Center',
   'Careers',
-  
 ];
 
 function Navbar(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const { window } = props;
   const theme = useTheme();
   const isXSmallScreen = useMediaQuery('(max-width: 1042px)');
@@ -46,40 +43,44 @@ function Navbar(props) {
     setDrawerOpen(!drawerOpen);
   };
 
-  const handleDropdownOpen = (index) => {
-    setDropdownOpen(index);
+  const handleDropdownToggle = (event) => {
+    if (anchorEl && anchorEl === event.currentTarget) {
+      setAnchorEl(null);
+    } else {
+      setAnchorEl(event.currentTarget);
+    }
   };
 
   const handleDropdownClose = () => {
-    setDropdownOpen(null);
-  };
-
-  const handleMouseEnter = (index) => {
-    if (!isSmallScreen) {
-      handleDropdownOpen(index);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isSmallScreen) {
-      handleDropdownClose();
-    }
+    setAnchorEl(null);
   };
 
   const drawer = (
- 
- <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Divider />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
               sx={{ textAlign: 'center' }}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
+              onClick={(event) => handleDropdownToggle(event)}
             >
               <ListItemText primary={item} />
+              {index !== 0 && (index === 2 || index === 1) && <ArrowDownAltIcon />}
             </ListItemButton>
+            <Menu
+              id={item}
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleDropdownClose}
+              MenuListProps={{
+                'aria-labelledby': item,
+              }}
+            >
+              <MenuItem onClick={handleDropdownClose}>Item 1</MenuItem>
+              <MenuItem onClick={handleDropdownClose}>Item 2</MenuItem>
+              <MenuItem onClick={handleDropdownClose}>Item 3</MenuItem>
+            </Menu>
           </ListItem>
         ))}
       </List>
@@ -90,8 +91,6 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <container>
-
     <Box>
       <AppBar
         component="nav"
@@ -123,8 +122,9 @@ function Navbar(props) {
               navItems.map((item, index) => (
                 <Button
                   key={item}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                  aria-controls={item}
+                  aria-haspopup="true"
+                  onClick={(event) => handleDropdownToggle(event)}
                   sx={{
                     fontSize: isTabScreen ? '12px' : '',
                     paddingX: '1rem',
@@ -133,7 +133,7 @@ function Navbar(props) {
                   }}
                 >
                   {item}
-                  {(index === 2 || index === 1) && <ArrowDownAltIcon />}
+                  {index !== 0 && (index === 2 || index === 1) && <ArrowDownAltIcon />}
                 </Button>
               ))
             )}
@@ -196,8 +196,6 @@ function Navbar(props) {
         <Toolbar />
       </Box>
     </Box>
-    </container>
-
   );
 }
 

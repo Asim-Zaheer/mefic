@@ -25,6 +25,7 @@ export default function Cards({ H1, para, image,link_href }) {
             mx: isXSmallScreen ? '2%' : isMobile ? '2%' : '3%',
             maxWidth: isMobile ? '90%' : isTabletScreen ? 470 : 470,
             minHeight:isTabletScreen?100: 200,
+            paddingRight:"",
             position: 'relative',
             boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1)',
             mt: isMobile ? '10%' : '',
