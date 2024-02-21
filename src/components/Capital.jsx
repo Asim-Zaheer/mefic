@@ -1,84 +1,62 @@
-"use client"
-import Container from "./Container"
-import Common from "./Common"
-import Link from "next/link"
+import Container from "./Container";
+import Common from "./Common";
+import Link from "next/link";
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import {Grid} from "@mui/material"
-import { Box } from "@mui/material"
-import {useMediaQuery} from "@mui/material"
-export default function Capital(){
-    const isMobile = useMediaQuery('(max-width:600px)');
-    const isTabletScreen = useMediaQuery('(max-width:899px)');
-    const isXSmallScreen = useMediaQuery('(max-width:300px)');
+import { Grid, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
+
+export default function Capital() {
     const isLargeScreen = useMediaQuery("(max-width:1092px)");
-    const isXLargeScreen = useMediaQuery("(max-width:1300px)");
-  
-    const Data=[
-        { "image": "assets/meras.svg" },
-        { "image": "assets/meras.svg" },
+
+    const Data = [
+        { "image": "assets/hotel1.svg" },
+        { "image": "assets/karam.svg" },
         { "image": "assets/hotel1.svg" },
         { "image": "assets/karam.svg" },
         { "image": "assets/sultan.svg" },
         { "image": "assets/body.svg" },
-        
-    ]
-    return(
-        <>
-        <Container>
-        <Box sx={{ display: "flex", justifyContent:isLargeScreen?"center": "center", alignItems: "center", textAlign: "center" }}>
-  <Common H1="MEFIC Capital" bold="Portfolio" paragraph="Office ipsum you must be muted. Conversation banner gave dive investigation chime usability whatever. Winning of crystallize another container reinvent stands." H2="" />
-</Box>
+    ];
 
-<Box sx={{  fontFamily: "Open Sans", fontWeight: "600", fontSize: "16px", display: "flex", justifyContent: "space-around", pb: "6%" }}>
-  <Link href="#"  style={{
-          color: "#3D3D3D",
-          textDecoration: "none",
-          transition: "color 0.3s",
-          textDecoration:"none",
-          "&:hover": {
-            backgroundColor: "red",
-          },
-        }} >
-    All
-  </Link>
-  <Link href="#" style={{color:"#E95A0C"  }}>
-    Real Estate
-  </Link>
-  <Link href="#" style={{color:"#E95A0C"  }} >
-    Equity Funds
-  </Link>
-</Box>
+    return (
+      <div style={{ backgroundColor: "#fff",maxWidth:"" }}>
 
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}> 
-          <Grid container
-            spacing={2}                      
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",          
-              justifyContent: "center",
-            }}
-          >
-            {Data.map((item, index) => (
-              <Grid item xs={12} sm={4} md={2} key={index}> {/* Adjusted grid item sizes for better layout */}
-                <Card sx={{ minWidth: 120, zIndex: 1    ,  }}> {/* Ensure minimum card width for smaller screens */}
-                {/* <Image {item.image} /> */}
-                <img srcSet={item.image} width="100%" evolution={2} height="100%"  alt="" />
-                  {/* <CardMedia
-                    component="img"
-                    image={item.image}
-                    sx={{
-                      objectFit: "cover",   
-                      height: '26vh',
-                    //   width:"18vw"       
-                    }}
-                  /> */}
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+<Container>
+
+<Box sx={{ backgroundColor: "#fff", paddingTop: "5vh", paddingLeft: isLargeScreen ? "" : "5vh" }}>
+            <Typography sx={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "", fontSize:{sx: "2vh",sm: "4vh",md:"6vh"}  }}>
+                MEFIC Capital <span style={{ fontWeight: "bold", color: "#E95A0C" }}> Portfolio</span>
+            </Typography>
+            <Typography sx={{ textAlign: "center", paddingTop: "5vh", paddingBottom: "5vh", paddingLeft: isLargeScreen ? "0" : "12vh" }}>
+                Office ipsum you must be muted. Conversation banner gave dive investigation chime usability whatever. Winning of crystallize another container reinvent stands.
+            </Typography>
+            <Box sx={{ fontFamily: "Open Sans", fontWeight: "600", fontSize: "16px", display: "flex", justifyContent: isLargeScreen ? "center" : "space-between", paddingLeft: isLargeScreen ? "0" : "30vh", paddingTop: "10vh" }}>
+                <Link href="#" style={{ color: "#E95A0C", textDecoration: "none", transition: "color 0.3s", "&:hover": { backgroundColor: "red" } }}>
+                    All
+                </Link>
+                <Link href="#" style={{ color: "#E95A0C", textDecoration: "none" }}>
+                    Real Estate
+                </Link>
+                <Link href="#" style={{ color: "#E95A0C", textDecoration: "none" }}>
+                    Equity Funds
+                </Link>
+            </Box>
         </Box>
-      </Container>
-        </>
-    )
+
+
+    <Box sx={{ display: "flex", justifyContent: "space-around", gap: 2 ,paddingLeft:{sx: "15vh",sm: "3vh",md:"35vh"},paddingTop:"10vh"}}>
+        <Grid container spacing={2}>
+            {Data.map((item, index) => (
+                <Grid item xs={4} sm={6} md={2} key={index}>
+                    <Card sx={{ minWidth: 130, zIndex: 1 ,display:"flex",justifyContent:"space-between"}}>
+                        <img src={item.image} width="100%" height="100%" alt="" />
+                    </Card>
+                </Grid>
+            ))}
+        </Grid>
+    </Box>
+</Container>
+        </div>
+
+    );
 }

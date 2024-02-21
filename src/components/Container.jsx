@@ -1,9 +1,9 @@
 import React from "react";
-
+import { Box } from "@mui/material";
 const Container = ({children}) => {
   return (
     <>
-    <div sx={{width: "95%", marginX: "auto"}} >{children}</div>
+    <Box sx={{width: "80%", marginx: "auto"}} >{children}</Box>
     </>
   )
 }
