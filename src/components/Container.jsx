@@ -3,7 +3,8 @@ import { Box } from "@mui/material";
 const Container = ({children}) => {
   return (
     <>
-    <Box sx={{width: "80%", marginx: "auto"}} >{children}</Box>
+        
+    <Box sx={{width: "80%", marginx: "auto",               }} >{children}</Box>
     </>
   )
 }

@@ -8,7 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { List, ListItem, ListItemText } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import Headermodel from './Headermodel';
 export default function Footer() {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTabletScreen = useMediaQuery('(max-width:899px)');
@@ -34,6 +34,10 @@ export default function Footer() {
     <>
       <div style={{borderTop:"0.2vh solid #2D3C65"}}></div>
       <Container>
+      <Box sx={{display:"flex",flexDirection:"row"}}>
+    <Headermodel/>
+    </Box> 
+
         <Box
           sx={{
             display: 'flex',
@@ -59,6 +63,7 @@ export default function Footer() {
               // paddingLeft:"3%" 
             }}
           >
+
             <Image src="./weblogo 2.svg" alt="" width={100} height={50} />
             <Typography
               sx={{
