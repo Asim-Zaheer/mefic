@@ -130,6 +130,7 @@ function Navbar(props) {
                     paddingX: '1rem',
                     textTransform: 'none',
                     color: '#fff',
+                    fontFamily:"Open Sans"
                   }}
                 >
                   {item}

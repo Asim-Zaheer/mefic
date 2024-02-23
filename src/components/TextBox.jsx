@@ -29,10 +29,11 @@ const TextBox = () => {
               sx={{
                 color: "white",
                 fontSize: { xs: "6vw", md: "60px" },
-                fontWeight: 10,
+                fontWeight: 400,
                 marginBottom: 0,
                 fontFamily: "Geneva",
                 paddingTop: "vh",
+                fontFamily:"Clash Display"
               }}
             >
               Your future financial{" "}
@@ -56,6 +57,7 @@ const TextBox = () => {
                 paddingLeft: { xs: "0vw", md: "0vw" },
                 paddingRight: { xs: "3vw", md: "3vw" },
                 paddingTop: { xs: "30px", md: "40px" },
+                fontFamily:"Open Sans"
               }}
             >
               Office ipsum you must be muted. Conversation banner gave dive investigation chime
@@ -76,6 +78,9 @@ const TextBox = () => {
               gap: "18px",
               transform: "scale(0.8)",
               backgroundColor: "#E95A0C",
+              fontFamily:"Open Sans",
+              fontWeight:"600",
+              
             }}
           >
             Book a Consultant
@@ -87,6 +92,8 @@ const TextBox = () => {
               minWidth: is600Screen ? "15vw" : "100px",
               color: "#fff",
               borderColor: "#E95A0C",
+              fontFamily:"Open Sans",
+              fontWeight:"600"
             }}
           >
             Login

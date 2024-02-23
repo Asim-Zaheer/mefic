@@ -36,11 +36,11 @@ export default function Portfolio() {
 }}>
    
      
-    <Typography sx={{fontSize:{ xs: "6vw", md: "3vw" },paddingTop:"10vh" }}>
+    <Typography sx={{fontSize:{ xs: "6vw", md: "3vw",fontFamily:"clash display" },paddingTop:"10vh" }}>
     The <span style={{color:"black",fontWeight:"bold"}}>latest </span> news and our <br/> <span style={{color:"#E95A0C",fontWeight:"bold"}}>portfolio companies</span> 
     </Typography>
     <Typography sx={{borderBottom:"0.5vh solid #2D3C65",maxWidth:{ xs: "25vw", md: "12vw" },color:"", paddingBottom:"2vh",}}> </Typography>
-    <Typography sx={{maxWidth:"70%",paddingTop:"5vh"}}>Office ipsum you must be muted. Conversation banner gave dive investigation chime usabiltiy whatever. Winning of crystallize another container reinvent stands. Left you viral relaxation unlock t-shaped. Ideal deck support attached waste highlights game synchronise. </Typography>
+    <Typography sx={{maxWidth:"70%",paddingTop:"5vh",fontFamily:"open sans"}}>Office ipsum you must be muted. Conversation banner gave dive investigation chime usabiltiy whatever. Winning of crystallize another container reinvent stands. Left you viral relaxation unlock t-shaped. Ideal deck support attached waste highlights game synchronise. </Typography>
     </Grid>
 
           <Grid container sx={{

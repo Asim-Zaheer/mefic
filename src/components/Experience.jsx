@@ -6,15 +6,15 @@ export default function Experience() {
   return (
     <Container>
       <div style={{ backgroundColor: "#fff", width:"125%" }}>
-      <Grid sx={{ padding: { xs: '3vh', sm: '9vh',md:'17.5vh' } }}>
-      <Typography sx={{ fontSize: { xs: '4vw', sm: '5vh' }, padding: '1vh' }}>
+      <Grid sx={{ padding: { xs: '3vh', sm: '9vh',md:'17.5vh' }  }}>
+      <Typography sx={{ fontSize: { xs: '4vw', sm: '5vh' }, padding: '1vh',fontFamily:"Clash Display" }}>
         Our <span style={{ color: "#E95A0C", fontWeight: "bold" }}>Experience, Skills</span> <span>&</span> <br /> Expertise. <span style={{ color: "#E95A0C", fontWeight: "bold" }}>Your Profit.</span>
       </Typography>
       <Typography sx={{ borderBottom: { xs: "0.1vh solid #2D3C65", sm: "0.5vh solid #2D3C65", paddingLeft:"vh" },    maxWidth: {
             xs: "10vh",
             sm: "24vh"
           } ,paddingTop:"2vh"}} />
-<Typography variant="body1"  sx={{textAlign:"start",maxWidth:"70vh",paddingTop:"5vh"}}>
+<Typography variant="body1"  sx={{textAlign:"start",maxWidth:"100vh",paddingTop:"5vh",fontFamily:"Open Sans"}}>
 Office ipsum you must be muted. Conversation banner gave dive investigation chime usabiltiy whatever. Winning of crystallize another container reinvent stands. Left you viral relaxation unlock t-shaped. Ideal deck support attached waste highlights game synchronise.
 </Typography>
     </Grid>

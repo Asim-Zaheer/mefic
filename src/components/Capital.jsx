@@ -24,10 +24,10 @@ export default function Capital() {
 <Container>
 
 <Box sx={{ backgroundColor: "#fff", paddingTop: "5vh", paddingLeft: isLargeScreen ? "" : "5vh" }}>
-            <Typography sx={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "", fontSize:{sx: "2vh",sm: "4vh",md:"6vh"}  }}>
+            <Typography sx={{ fontFamily:"clash display",display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "", fontSize:{sx: "2vh",sm: "4vh",md:"6vh"}  }}>
                 MEFIC Capital <span style={{ fontWeight: "bold", color: "#E95A0C" }}> Portfolio</span>
             </Typography>
-            <Typography sx={{ textAlign: "center", paddingTop: "5vh", paddingBottom: "5vh", paddingLeft: isLargeScreen ? "0" : "12vh" }}>
+            <Typography sx={{ fontFamily:"open sans",textAlign: "center", paddingTop: "5vh", paddingBottom: "5vh", paddingLeft: isLargeScreen ? "0" : "12vh" }}>
                 Office ipsum you must be muted. Conversation banner gave dive investigation chime usability whatever. Winning of crystallize another container reinvent stands.
             </Typography>
             <Box sx={{ fontFamily: "Open Sans", fontWeight: "600", fontSize: "16px", display: "flex", justifyContent: isLargeScreen ? "center" : "space-between", paddingLeft: isLargeScreen ? "0" : "30vh", paddingTop: "10vh" }}>
